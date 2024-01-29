@@ -16,6 +16,7 @@ void printBoard() {
 	cout << '\n';
 }
 
+// delta
 int dx[8] = { -1, -2, -2, -1, 1, 2, 2, 1};
 int dy[8] = { -2, -1, 1, 2, 2, 1, -1, -2};
 
@@ -34,8 +35,9 @@ bool isSafe(int new_row, int new_col, int step) {
 
 void knightTour(int row, int col, int step) {
 	// (0, 0)
-	if (step == n * m + 1 && row == 0 && col == 0) {
+	if (step == n * m + 1 && board[row][col] == 1) {
 		printBoard();
+		exit(0);
 		return;
 	}
 
